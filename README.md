@@ -23,7 +23,7 @@ It's hacky, but it works. Hopefully, the bug will be addressed by someone more c
 
 ```ts
 imoprt vue from '@vitejs/plugin-vue'
-import { cherry-parse } from 'vue-cherry-compiler-patch'
+import parse from 'vue-cherry-compiler-patch'
 import * as compilerSFC from 'vue/compiler-sfc'
 
 export default defineConfig({
@@ -31,7 +31,7 @@ export default defineConfig({
     vue({
       compiler: {
         ...compilerSFC,
-        parse: cherry-parse,
+        parse
       }
     })
   ]
