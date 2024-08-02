@@ -1,6 +1,8 @@
 # vue-compiler-sfc-cherry-cljs
 Currently Vue seems to break when you use `<script lang="cljs">` due to a bug (see [vuejs/core #8368](https://github.com/vuejs/core/issues/8368) and [vitejs/vite-plugin-vite #178](https://github.com/vitejs/vite-plugin-vue/issues/178)). This is just a drop-in replacement for the `compiler.parse` function used in [@vitejs/plugin-vue](https://github.com/vitejs/vite-plugin-vue/tree/main/packages/plugin-vue]).
 
+*If using VSCode with the Vue plugin, you may need to disable "hybridMode" or using `lang="cljs"` will cause the entire `.vue` file to show as invalid in the editor.
+
 It could be tweaked to use [Squint](https://github.com/squint-cljs/squint) or probably any other language (like CoffeeScript) which is hitting this issue.
 
 # What it does
